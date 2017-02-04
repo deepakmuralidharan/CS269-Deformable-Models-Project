@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>CS269 Deformable Models Project</title>
+</head>
+
+<body>
+<div id="container">
+		<div id="header">
+        	<h1>CS269<span class="off">Project</span></h1>
+            <h2>Deepak Muralidharan</h2>
+        </div>
+
+
+		<div id="content">
+
+
+        <div id="content_top"></div>
+        <div id="content_main">
+        	<h2>A comparative study between Deep Active Contours and Gradient Vector Flow Snakes for interactive boundary extraction</h2>
+        	<p>&nbsp;</p>
+           	<p>&nbsp;</p>
+						<h3>Project Member: Deepak Muralidharan</h3>
+	        	<p>&nbsp;</p>
+       	  <h3>Abstract</h3>
+					<p>&nbsp;</p>
+					<p>In this project, we do a comparative study between the Deep Active Contour model and the classic Gradient vector flow (GVF) based Snake active contours for applications in interactive boundary extraction. As opposed to the GVF snakes contour model which is an energy minimization based approach, the Deep Active Contour model tries to learn the vector from the respective point on the evolving contour towards the closest point on the boundary of the object of interest. We train a convolutional neural network (CNN) model which learns to predict this direction vector using a deep patch based representation and then evolve the contour in this direction. We provide a visual and quantitative evaluation of both these methods on a few sample images from the densely annotated DAVIS segmentation dataset. </p>
+					<p>&nbsp;</p>
+					<hr>
+					<p>&nbsp;</p>
+					<h3> The project <a href="cs269_report.pdf">report</a> can be found here.</h3>
+					<p>&nbsp;</p>
+					<h3> Source code to the project can be found <a href="source_code/">here</a>.</h3>
+					<p>&nbsp;</p>
+					<hr>
+					<p>&nbsp;</p>
+					<h3>Results overview</h3>
+					<p>&nbsp;</p>
+					<h4>Performance of Deep Active Contour</h4>
+					<p>&nbsp;</p>
+					<img src="images/image1.png" alt="HTML5 Icon" style="width:300px;">
+					<figcaption>Performance of the deep active contour model on two images i.e.(a) bear and (b) blackswan from the DAVIS dataset. In both the images, the initial contour is represented by blue color and the final contour is represented by red color.</figcaption>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<h4>Performance of GVF Snakes</h4>
+					<p>&nbsp;</p>
+					<img src="images/image2.png" alt="HTML5 Icon" style="width:300px;">
+					<figcaption> GVF algorithm on an example image. The image on the top left corner describes the grayscale image with the
+initial contour, the top right image is the edge map of the grayscale</figcaption>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<h4>Comparison of Deep Active Contours and GVF Snakes</h4>
+					<p>&nbsp;</p>
+					<img src="images/image3.png" alt="HTML5 Icon" style="width:400px;">
+					<figcaption>Comparison of the boundary extraction performance for deep active contours (left) and Gradient Vector Flow based
+snakes (right). In both the images, the initial contour is represented by blue color and the final contour is represented by red
+color.</figcaption>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<hr>
+					<p>&nbsp;</p>
+					<h3>Steps to run the source code for Deep Active Contour</h3>
+					<p>&nbsp;</p>
+					<p>1. Please make sure you are using MacOS (Mac) or Linux to run the algorithm. This code needs Tensorflow environment to run which can be setup only in macOS or Linux. This is not supported in Windows OS.
+					<p>&nbsp;</p>
+					<p>2. You will need Tensorflow and Python (Anaconda) to be installed in your system to run the inference part. For installing Tensorflow and Anaconda, please look at the procedure given in this <a href="https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html">page</a>. Specifically, please have a look at the sections on "Anaconda Installation" and "Using Conda".</p>
+					<p>&nbsp;</p>
+					<p>3. After installing Tensorflow, you can do a small check to verify if Tensorflow is working. For this, go to terminal and type "source activate tensorflow". This will activate the virtualenv you installed in the previous step. Now type "python". This will open the python environment. In this python environment, type "import tensorflow as tf". If you do not get any errors, that means you have successfully installed Tensorflow and can proceed to the next step.</p>
+					<p>&nbsp;</p>
+					<p>4. Now navigate to the folder "source_code/deep_active_contours/"</p>
+					<p>&nbsp;</p>
+					<p>5. Go to terminal and type "source activate tensorflow" to activate the Tensorflow virtualenv. Now type "bash run_project.sh" to run the main bash script which runs the algorithm.</p>
+					<p>&nbsp;</p>
+					<p>6. Now, open MATLAB and run "save_results.m" to plot and save the final results. The results will be saved as "final_results.jpg".</p>
+					<p>&nbsp;</p>
+					<hr>
+					<p>&nbsp;</p>
+					<h3>Steps to run the code for GVF Snakes method</h3>
+					<p>&nbsp;</p>
+					<p>1. Please navigate to the folder "source_code/gvf_snakes/"</p>
+					<p>&nbsp;</p>
+					<p>2. Open MATLAB and run "run_snakes.m" which runs the algorithm.</p>
+					<p>&nbsp;</p>
+					<p>3. Now, run "save_results.m" to plot and save the final results. The results will be saved as "final_results.jpg".</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+				</div>
+   </div>
+</body>
+</html>
